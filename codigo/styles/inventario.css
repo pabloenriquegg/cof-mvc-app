@@ -1,0 +1,214 @@
+/* Estilos específicos para la vista de consulta de inventario */
+/* Header principal */
+header {
+    width: 100%;
+    flex-shrink: 0;
+    background-color: rgba(0, 138, 29);
+}
+
+/* Banner del header */
+.banner {
+    text-align: center;
+    background: linear-gradient(90deg, #b1abaa, #f4efee);
+    color: rgba(0, 138, 29);
+    padding: 10px;
+}
+/*
+.banner h1 {
+    font-size: 0.7rem;
+    margin: 0;
+} */
+
+.banner img {
+    margin-top: 1px;
+    max-width: 50px; /* a 150px es más bonito pero muy grande*/
+}
+
+/* Menú desplegable */
+nav.menu {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+    /*
+    width: 100%;
+    background-color: rgba(0, 138, 29);
+    text-align: center;
+    position: relative;
+    padding: 10px 0; */
+}
+nav.menu h3 {
+    margin: 0;
+    padding: 0;
+    color: white;
+    /*text-align: left;
+    margin-left: 20px;*/
+}
+
+nav.menu ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+nav.menu ul li {
+    position: relative;
+    padding: 10px 15px;
+}
+
+nav.menu ul li a {
+    display: block;
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 10px 15px;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+nav.menu ul li a:hover {
+    background-color: #1f3526;
+}
+
+nav.menu ul li .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #044219;
+    min-width: 200px;
+    left: 0;
+    top: 100%;
+    z-index: 10;
+    text-align: left;
+    padding: 5px 0;
+    border-radius: 4px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+nav.menu ul li:hover .dropdown-content {
+    display: block;
+}
+
+nav.menu ul li .dropdown-content li {
+    display: block;
+    padding: 8px 15px;
+}
+
+nav.menu ul li .dropdown-content li a {
+    display: block;
+    padding: 10px;
+    color: white;
+    transition: background-color 0.3s;
+}
+
+nav.menu ul li .dropdown-content li a:hover {
+    background-color: #1f3526;
+}
+
+/* Estilos generales */
+body {
+    font-family: Roboto, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+h2, h3 {
+    color: #008a1d;
+    text-align: center;
+    margin: 10px 0;
+}
+/*boton de procesar todos*/
+.contenedor-boton{
+    display: flex;
+    justify-content: center;
+    margin: 15px 0;
+}
+
+#procesar-todos {
+    background-color: orange;
+    color: white;
+    font-size: 16px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+#procesar-todos:hover {
+    background-color: darkorange;
+}
+
+/*tabla inventario*/
+.tabla-inventario {
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+    overflow-x: auto;
+    display: block;
+    white-space: nowrap;
+}
+
+.tabla-inventario thead {
+    background-color: #008a1d;
+    color: white;
+}
+
+.tabla-inventario th, .tabla-inventario td {
+    padding: 10px;
+    text-align: center;
+    border: 1px solid #ddd;
+}
+
+/*Alternar colores de las filas**/
+.tabla-inventario tbody tr:nth-child(odd) {
+    background-color: #f9f9f9;
+}
+
+.tabla-inventario tbody tr:nth-child(even) {
+    background-color: #e6e6e6;
+}
+
+/*boton guardar*/
+.guardar-btn {
+    background-color: #ddd;
+    color: black;
+    font-size: 14px;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: not-allowed;
+}
+
+.guardar-btn:enabled {
+    background-color: #4caf50;
+    color: white;
+    cursor: pointer;
+}
+
+.guardar-btn:enabled:hover {
+    background-color: #45a049;
+}
+
+/*adaptable a moviles*/
+@media screen and (max-width: 768px) {
+    .tabla-inventario {
+        display: block;
+        overflow-x: auto;
+        width: 100%;
+        white-space: nowrap;
+    }
+
+    .contenedor-boton {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #procesar-todos {
+        width: 90%;
+    }
+}

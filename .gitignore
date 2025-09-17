@@ -1,0 +1,21 @@
+# Archivos de sistema
+.DS_Store
+Thumbs.db
+
+# Archivos temporales
+*.tmp
+*.bak
+*.swp
+
+# Configuración de IDEs
+.vscode/
+.idea/
+*.iml
+
+# Logs
+*.log
+
+# Archivos sensibles
+config.php
+conexion.php
+user.php

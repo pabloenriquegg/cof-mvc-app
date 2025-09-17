@@ -1,0 +1,571 @@
+/* Estilos generales */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Roboto, sans-serif;
+    background-color: #f4f4f4;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+/* HEADER INICIO DE SESIÓN */
+.banner-login {
+    text-align: center;
+    background: linear-gradient(90deg, #b1abaa, #f4efee);
+    color: rgba(0, 138, 29); /*#008a1d*/
+    padding: 10px;
+}
+
+.banner-login h1 {
+    font-size: 1.5rem;
+    margin: 0;
+}
+
+.banner-login img {
+    margin-top: 5px;
+    max-width: 150px;
+}
+
+/* Header principal */
+header {
+    width: 100%;
+    flex-shrink: 0;
+    background-color: rgba(0, 138, 29);
+}
+
+/* Banner del header */
+.banner {
+    text-align: center;
+    background: linear-gradient(90deg, #b1abaa, #f4efee);
+    color: rgba(0, 138, 29);
+    padding: 10px;
+}
+
+/*
+.banner h1 {
+    font-size: 0.7rem;
+    margin: 0;
+} */
+
+.banner img {
+    margin-top: 1px;
+    max-width: 50px; /* a 150px es más bonito pero muy grande*/
+}
+
+
+
+/* Menú desplegable */
+nav.menu {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+    /*
+    width: 100%;
+    background-color: rgba(0, 138, 29);
+    text-align: center;
+    position: relative;
+    padding: 10px 0; */
+}
+nav.menu h3 {
+    margin: 0;
+    padding: 0;
+    /*text-align: left;
+    margin-left: 20px;*/
+}
+
+nav.menu ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+nav.menu ul li {
+    position: relative;
+    padding: 10px 15px;
+}
+
+nav.menu ul li a {
+    display: block;
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 10px 15px;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+nav.menu ul li a:hover {
+    background-color: #1f3526;
+}
+
+nav.menu ul li .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #044219;
+    min-width: 200px;
+    left: 0;
+    top: 100%;
+    z-index: 10;
+    text-align: left;
+    padding: 5px 0;
+    border-radius: 4px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+nav.menu ul li:hover .dropdown-content {
+    display: block;
+}
+
+nav.menu ul li .dropdown-content li {
+    display: block;
+    padding: 8px 15px;
+}
+
+nav.menu ul li .dropdown-content li a {
+    display: block;
+    padding: 10px;
+    color: white;
+    transition: background-color 0.3s;
+}
+
+nav.menu ul li .dropdown-content li a:hover {
+    background-color: #1f3526;
+}
+
+/* Contenido principal */
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1;
+    width: 100%;
+    padding: 20px;
+}
+
+/* Estilo para h2 en formularios */
+h2 {
+    color: rgb(0, 138, 29);
+    text-align: center;
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+}
+
+/* Formulario Inicio de sesión */
+.formulario-incio-sesion {
+    background-color: rgba(0, 138, 29, 0.2);
+    padding: 20px;
+    border-radius: 8px;
+    max-width: 400px;
+    margin: auto;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+.formulario-incio-sesion  label {
+    font-weight: bold;
+    color: black;
+    margin-bottom: 8px;
+}
+
+.formulario-incio-sesion input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+input[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    background-color: #044219;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+input[type="submit"]:hover {
+    background-color: #1f3526;
+}
+
+/* Formulario de consulta */
+.formulario-consulta {
+    background-color: rgba(0, 138, 29, 0.2);
+    padding: 10px;
+    border-radius: 8px;
+    width: 90%;
+    margin: auto;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: center;
+}
+/*Formulario fila*/
+.formulario-fila {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+.formulario-fila label {
+    font-weight: bold;
+    color: black;
+    white-space: nowrap;
+}
+.formulario-fila input {
+    width: 150px;
+    padding: 8px;   
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.formulario-fila button {
+    background-color: #044219;
+    color: white;
+    padding: 8px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    white-space: nowrap;
+}
+.formulario-fila button:hover {
+    background-color: #1f3526;
+}
+/**
+.formulario-consulta label {
+    font-weight: bold;
+    color: black;
+    margin-bottom: 8px;
+}
+
+.formulario-consulta input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.formulario-consulta button {
+    background-color: #044219;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 100%;
+}
+
+.formulario-consulta button:hover {
+    background-color: #1f3526;
+}
+    **/
+
+/* Tabla de resultados */
+.tabla-resultados {
+    width: 80%;
+    margin: 20px auto;
+    border-collapse: collapse;
+    text-align: left;
+}
+
+.tabla-resultados th {
+    background-color: rgba(0, 138, 29, 0.8);
+    color: white;
+    padding: 10px;
+}
+
+.tabla-resultados td {
+    padding: 10px;
+    border: 1px solid #ddd;
+    color: black;
+}
+
+.tabla-resultados tr:nth-child(even) {
+    background-color: #f0f8f0;
+}
+/*botones del dashboard*/
+
+.botones-dashboard {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+    margin-top: 20px;
+    width: 100%;
+    max-width: 400px;
+}
+
+.botones-dashboard button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 15px;
+    font-size: 1rem;
+    /*background-color: #044219;*/
+    background-color: rgba(0, 138, 29);
+    color: white;
+    border: none;
+    border-radius: 8px; 
+    cursor: pointer;
+    width: 100%;
+    height: 60px;
+    text-align: center;
+    gap: 10px;
+    /*
+    padding: 10px 20px;
+    font-size: 1rem;
+    background-color: #044219;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    */
+}
+.botones-dashboard button img{
+    width: 24px;
+    height: 24px;
+}
+
+.botones-dashboard button:hover {
+    /*background-color: #1f3526;*/
+    background-color: #64b37d;
+}
+
+@media (max-width:600px){
+
+    .botones-dashboard {
+        grid-template-columns: 1fr;
+    }
+}
+
+/******Botones de paginación*******/
+
+
+
+/*Contenedor general de los controles superiores*/
+.dataTables_wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 5px;
+}
+
+.dataTables_length, .dataTables_paginate {
+    display: inline-block;
+    vertical-align: middle;
+    margin-bottom: 5px;
+}
+
+/* paginacion derecha arriba */
+.dataTables_paginate {
+    float: right;
+    margin-bottom: 5px;
+}
+
+/*selector de registraro arriba a la izquierda*/
+.dataTables_length {
+    float: left;
+    margin-bottom: 5px;
+}
+
+/*buscador abajo a la izquierda*/
+.dataTables_filter {
+    float: left;
+    margin-top: 5px;
+}
+
+/*info paginación abajo a la derecha*/
+.dataTables_info {
+    float: right;
+    margin-top: 5px;
+}
+
+/* estilo de los botones de paginacion y ordenacion*/
+.dataTables_paginate .paginate_button {
+    padding: 5px 8px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    background: #f8f8f8;
+    cursor: pointer;
+    transition: 0.2s;
+    margin: 0 2px;
+}
+
+.dataTables_paginate .paginate_button:hover {
+    background: #ddd;
+}
+
+/*botones ordenacion*/
+th {
+    cursor: pointer;
+    position: relative;
+    padding-right: 15px;
+    color: #666;
+}
+
+/*iconos ordenacion*/
+th.sorting:after {
+    content: " ⬍";
+    position: absolute;
+    right: 5px;
+    color: #666;
+}
+
+th.sorting_asc:after {
+    content: " ⬆";
+    color: #000;
+}
+
+th.sorting_desc:after {
+    content: " ⬇";
+    color: #000;
+}
+
+.semaforo {
+    text-align: center;
+    font-size: 20px;
+}
+
+.editCantidadReal {
+    width: 60px;
+}
+
+.procesar-btn {
+    float: right;
+    margin-bottom: 10px;
+}
+
+/* Estilos específicos para la vista de consulta de inventario */
+
+/* Contenedor principal */
+.contenedor-inventario {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+    padding: 20px;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Título principal */
+.contenedor-inventario h2 {
+    color: #008a1d;
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+/* Formulario de selección de combos */
+.formulario-inventario {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    background-color: rgba(0, 138, 29, 0.1);
+    padding: 15px;
+    border-radius: 8px;
+}
+
+.formulario-inventario label {
+    font-weight: bold;
+    color: black;
+}
+
+.formulario-inventario select {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1rem;
+}
+
+.formulario-inventario button {
+    background-color: #008a1d;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.formulario-inventario button:hover {
+    background-color: #1f3526;
+}
+
+/* Tabla de resultados */
+.contenedor-tabla {
+    width: 100%;
+    overflow-x: auto;
+    max-height: 80vh;
+}
+
+.tabla-inventario {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    white-space: nowrap;
+}
+
+.tabla-inventario th {
+    background-color: rgba(0, 138, 29, 0.8);
+    color: white;
+    padding: 10px;
+}
+
+.tabla-inventario td {
+    padding: 10px;
+    border: 1px solid #ddd;
+    color: black;
+}
+.tabla-inventario tr:hover {
+    background-color: rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3 ease;
+}
+
+.tabla-inventario tr:nth-child(even) {
+    background-color: #f0f8f0;
+}
+
+
+/* Responsividad */
+@media (max-width: 768px) {
+    .contenedor-inventario {
+        width: 95%;
+    }
+
+    .formulario-inventario {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .formulario-inventario select {
+        width: 100%;
+    }
+
+    .contenedor-tabla {
+        width: 100%;
+        overflow-x: auto;
+    }
+    .tabla-inventario {
+        width: max-content;
+        min-width: 100%;
+    }
+}
